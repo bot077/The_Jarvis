@@ -55,15 +55,6 @@ def takeCommand():
     return query
 
 
-def sendEmail(to, content):
-    server = smtplib.SMTP('smtp.gmail.com', 587)
-    server.ehlo()
-    server.starttls()
-    server.login('ayoniiiiiiii10@gmail.com', 'xxxxxxxx')
-    server.sendmail("ayoniiiiii10@gmail.com", to, content)
-    server.close()
-
-
 # Main program starts hear...
 speak("Initializing Jarvis...")
 wishMe()
@@ -131,15 +122,6 @@ elif 'play music' in query.lower():
 elif 'pdf' in query.lower():
     url = "file:///E:/MY%20BAG/books/PythonNotesForProfessionals%20(1)%20(1)%20(1)%20(1)%20(2)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1).pdf"
     webbrowser.open_new(url)
-
-elif 'the time' in query.lower():
-    strTime = datetime.datetime.now().strftime("%H:%M:%S")
-    speak(f"{MASTER} the time is {strTime}....................Come on..................... hurry up")
-
-elif 'open code' in query.lower():
-    codePath = "C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe"
-    os.startfile(codePath)
-    print("VS CODE in ayon's pc")
 elif 'game' in query.lower():
     import random
 
@@ -215,16 +197,18 @@ elif 'game' in query.lower():
         print("👑----✨YOU ARE THE WINNER✨--🌀")
 
     elif (score_of_user < score_of_system):
-        print("BETTER LUCK NEXT TIME")
+        print(f"BETTER LUCK NEXT {MASTER}")
 
-elif 'email to iron' in query.lower():
-    try:
-        speak("What should I send")
-        content = takeCommand()
-        to = "ayoniiiiii10@gmail.com"
-        sendEmail(to, content)
-        speak("Email has sent successfully")
-    except Exception as e:
-        print(e)
-        speak("Sorry my friend Ayon......... I am not able to send this email")
+elif 'open vs code' in query.lower():
+    codePath = "C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe"
+    os.startfile(codePath)
+    print("VS CODE in ayon's pc")
 
+elif 'the time' in query.lower():
+    strTime = datetime.datetime.now().strftime("%H:%M:%S")
+    speak(f"{MASTER} the time is {strTime}....................Come on..................... hurry up")
+
+elif 'open vs code' in query.lower():
+    codePath = "C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe"
+    os.startfile(codePath)
+    print("VS CODE in ayon's pc")
