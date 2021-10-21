@@ -65,7 +65,7 @@ def sendEmail(to, content):
 
 
 # Main program starts hear...
-speak("Initializing Jarvis...")
+speak(f"{MASTER} Initializing Jarvis...")
 wishMe()
 query = takeCommand()
 
@@ -217,14 +217,8 @@ elif 'game' in query.lower():
     elif (score_of_user < score_of_system):
         print("BETTER LUCK NEXT TIME")
 
-elif 'email to iron' in query.lower():
-    try:
-        speak("What should I send")
-        content = takeCommand()
-        to = "ayoniiiiii10@gmail.com"
-        sendEmail(to, content)
-        speak("Email has sent successfully")
-    except Exception as e:
-        print(e)
-        speak("Sorry my friend Ayon......... I am not able to send this email")
-
+elif 'play music' in query.lower():
+    songs_dir = "C:\\Users\\admin\\Music\\a"
+    songs = os.listdir(songs_dir)
+    print(songs)
+    os.startfile(os.path.join(songs_dir, songs[0]))
