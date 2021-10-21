@@ -212,3 +212,7 @@ elif 'open vs code' in query.lower():
     codePath = "C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe"
     os.startfile(codePath)
     print("VS CODE in ayon's pc")
+
+elif 'pdf' in query.lower():
+    url = "file:///E:/MY%20BAG/books/PythonNotesForProfessionals%20(1)%20(1)%20(1)%20(1)%20(2)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1)%20(1).pdf"
+    webbrowser.open_new(url)
