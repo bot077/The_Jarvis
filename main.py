@@ -198,7 +198,9 @@ elif 'game' in query.lower():
 
     elif (score_of_user < score_of_system):
         print(f"BETTER LUCK NEXT {MASTER}")
-
+elif 'pdf' in query.lower():
+    url = '<FILE lOCATION WITH EXTENSION>'
+    webbrowser.open_new(url)
 elif 'open vs code' in query.lower():
     codePath = "C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe"
     os.startfile(codePath)
