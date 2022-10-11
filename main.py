@@ -74,7 +74,11 @@ elif 'open youtube' in query.lower():
     chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
     webbrowser.get(chrome_path).open(url)
     print("opening youtube for You.....")
-
+elif 'open reddit now' in query.lower():
+    # webbrowser.open("google.com")
+    url = "reddit.com"
+    chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
+    webbrowser.get(chrome_path).open(url)
 elif 'open google' in query.lower():
     # webbrowser.open("google.com")
     url = "google.com"
