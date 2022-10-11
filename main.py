@@ -205,6 +205,10 @@ elif 'open vs code' in query.lower():
     codePath = "C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe"
     os.startfile(codePath)
     print("VS CODE in ayon's pc")
+elif 'open vs code' in query.lower():
+    codePath = "C:\\Users\\admin\\AppData\\Local\\Programs\\Microsoft VS Code\\code.exe"
+    os.startfile(codePath)
+    print("VS CODE in ayon's pc")
 
 elif 'the time' in query.lower():
     strTime = datetime.datetime.now().strftime("%H:%M:%S")
